@@ -13,9 +13,11 @@
 
         <nav class="navigation">
 
-          <a href="index.html">
-            <img class="header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип City of Sedona">
-          </a>
+          <div class="logo-container">
+            <a href="index.html">
+              <img class="header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип City of Sedona">
+            </a>
+          </div>
 
           <ul class="main-navigation">
             <li class="main-navigation-item">
@@ -31,17 +33,17 @@
 
           <ul class="navigation-user">
             <li class="navigation-user-item">
-              <a class="navigation-user-search" href="#">
+              <a class="navigation-user-link search" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-user-item">
-              <a class="navigation-user-favourites" href="#">
+              <a class="navigation-user-link favourites" href="#">
                 <span class="visually-hidden">Избранное</span>
                 <span class="favourites-number">12</span>
               </a>
             </li>
-            <li class="navigation-user-item">
+            <li class="navigation-user-item want-button">
               <a class="button small" href="#">Хочу сюда!</a>
             </li>
           </ul>
@@ -140,18 +142,28 @@
                 <option class="select-filter-option">Сначала популярные</option>
               </select>
 
-                <button class="switch-btn active">
-                  <span class="visually-hidden">Отображение карточек плиткой</span>
-                </button>
+              <ul class="switch-button-list">
+                <li class="switch-button-item">
+                  <button class="switch-button active">
+                    <span class="visually-hidden">Отображение карточек плиткой</span>
+                  </button>
+                </li>
 
-                <button class="switch-btn">
-                  <span class="visually-hidden">Отображение карточек таблицей"</span>
-                </button>
+                <li class="switch-button-item">
+                  <button class="switch-button">
+                    <span class="visually-hidden">Отображение карточек таблицей"</span>
+                  </button>
+                </li>
 
-                <button class="switch-btn">
-                  <span class="visually-hidden">Отображение карточек списком"</span>
-                </button>
+                <li class="switch-button-item">
+                  <button class="switch-button">
+                    <span class="visually-hidden">Отображение карточек списком"</span>
+                  </button>
+                </li>
+              </ul>
+
             </div>
+
           </div>
           <!--Карточки-->
 
@@ -281,8 +293,8 @@
               <a class="pagination-link" href="#">4</a>
             </li>
 
-            <li>
-              <a>...</a>
+            <li class="pagination-item">
+              <a class="pagination-link dots">...</a>
             </li>
 
             <li class="pagination-item">
