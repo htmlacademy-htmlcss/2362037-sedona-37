@@ -13,9 +13,11 @@
 
         <nav class="navigation">
 
-          <a href="index.html">
-            <img class="header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип City of Sedona">
-          </a>
+          <div class="logo-container">
+            <a href="index.html" class="header-logo-link">
+              <img class="header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип City of Sedona">
+            </a>
+          </div>
 
           <ul class="main-navigation">
             <li class="main-navigation-item">
@@ -31,17 +33,17 @@
 
           <ul class="navigation-user">
             <li class="navigation-user-item">
-              <a class="navigation-user-search" href="#">
+              <a class="navigation-user-link search" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-user-item">
-              <a class="navigation-user-favourites" href="#">
+              <a class="navigation-user-link favourites" href="#">
                 <span class="visually-hidden">Избранное</span>
                 <span class="favourites-number">12</span>
               </a>
             </li>
-            <li class="navigation-user-item">
+            <li class="navigation-user-item want-button">
               <a class="button small" href="#">Хочу сюда!</a>
             </li>
           </ul>
@@ -70,31 +72,41 @@
           <!-- Первая часть преимуществ-->
 
           <ul class="advantages-list">
-            <li class="advantages-list-item">
-              <h3 class="title">Настоящий городок</h3>
-              <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            </li>
-            <li>
+            <li class="advantages-list-item big">
+              <div class="advantages-wrapper">
+                <h3 class="title">Настоящий городок</h3>
+                <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
               <img src="images/edvantage-photo-1.jpg" width="800" height="385" alt="Городской пейзаж Седоны.">
             </li>
+
             <li class="advantages-list-item">
-              <h3 class="title">Небольшая площадь</h3>
-              <p>Все достопримечательности находятся очень близко</p>
+              <div class="advantages-wrapper">
+                <h3 class="title">Небольшая площадь</h3>
+                <p>Все достопримечательности находятся очень близко</p>
+              </div>
             </li>
+
             <li class="advantages-list-item">
-              <h3 class="title">Красивая дорога</h3>
-              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <div class="advantages-wrapper">
+                <h3 class="title">Красивая дорога</h3>
+                <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              </div>
             </li>
+
             <li class="advantages-list-item">
-              <h3 class="title">Мало туристов</h3>
-              <p>Большинство едет в Гранд Каньон и толпится там</p>
+              <div class="advantages-wrapper">
+                <h3 class="title">Мало туристов</h3>
+                <p>Большинство едет в Гранд Каньон и толпится там</p>
+              </div>
             </li>
-            <li>
+
+            <li class="advantages-list-item big">
               <img src="images/edvantage-photo-2.jpg" width="800" height="385" alt="Вид на каньон.">
-            </li>
-            <li class="advantages-list-item">
-              <h3 class="title">Там есть мост дьявола</h3>
-              <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              <div class="advantages-wrapper">
+                <h3 class="title">Там есть<br>мост дьявола</h3>
+                <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              </div>
             </li>
           </ul>
 
@@ -111,11 +123,11 @@
             <ul class="advantages-icons-list">
               <li class="advantages-icons-item home">
                 <h3 class="title">Жильё</h3>
-                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                <p>Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
               </li>
               <li class="advantages-icons-item food">
                 <h3 class="title">Еда</h3>
-                <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+                <p>Всегда заказывайте<br>топовый фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li class="advantages-icons-item gifts">
                 <h3 class="title">Сувениры</h3>
@@ -140,8 +152,8 @@
           <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
 
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input type="email" name="email" placeholder="Ваш e-mail">
-            <input class="button blue" type="button" value="Подписаться">
+            <input class="catalog-email-input" type="email" name="email" placeholder="Ваш e-mail">
+            <input class="button blue subscribe-button" type="button" value="Подписаться">
           </form>
 
         </section>
@@ -151,17 +163,17 @@
 
           <ul class="socials-list">
             <li class="socials-list-item">
-              <a class="vk" href="https://vk.com/htmlacademy">
+              <a class="socials-list-lik vk" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Вконтакте</span>
               </a>
             </li>
             <li class="socials-list-item">
-              <a class="telegram" href="https://t.me/htmlacademy">
+              <a class="socials-list-lik telegram" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Телеграм</span>
               </a>
             </li>
             <li class="socials-list-item">
-              <a class="youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="socials-list-lik youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Youtube</span>
               </a>
             </li>
