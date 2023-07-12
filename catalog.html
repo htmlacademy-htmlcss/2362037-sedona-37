@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/slyles.css">
   </head>
 
   <body>
     <div class="page-container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
 
         <nav class="navigation">
 
@@ -35,12 +34,18 @@
             <li class="navigation-user-item">
               <a class="navigation-user-link" href="#">
                 <span class="visually-hidden">Поиск</span>
+                <svg class="navigation-user-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                  <path d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"/>
+                </svg>
               </a>
             </li>
             <li class="navigation-user-item">
               <a class="navigation-user-link" href="#">
                 <span class="visually-hidden">Избранное</span>
                 <span class="favourites-number">12</span>
+                <svg class="navigation-user-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                  <path d="M9.9 19a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 6.5 2C7.8 2 9 2.5 10 3.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/>
+                </svg>
               </a>
             </li>
             <li class="navigation-user-item want-button">
@@ -51,7 +56,7 @@
 
       </header>
 
-      <main class="catalog-main">
+      <main class="catalog-main" data-test="main">
 
         <header class="catalog-header">
           <h1 class="catalog-title">Гостиницы Седоны</h1>
@@ -64,16 +69,17 @@
               <a class="breadcrumbs-link">Гостиницы</a>
             </li>
 
+
           </ul>
 
-          <form class="catalog-filters">
+          <form class="catalog-filters" data-test="filter">
 
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Инфраструктура:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
-                  <label class="controle">
-                    <input class="controle-input" type="checkbox" name="sweeming-pools" checked>
+                  <label class="filter">
+                    <input class="filter-input" type="checkbox" name="sweeming-pools" checked>
                     Бассейн
                   </label>
                 </li>
@@ -122,6 +128,33 @@
 
             <fieldset class="catalog-filter-price">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+
+              <div class="price-inputs">
+                <label class="price-input-label"><span class="visually-hidden">Минимальная стоимость</span>
+                  <input class="price-input price-input-left" type="number" name="min-price" value="0">
+                  <span>от</span>
+                </label>
+
+                <label class="price-input-label"><span class="visually-hidden">Максимальная стоимость</span>
+                  <input class="price-input price-input-right" type="number" name="max-price" value="9000">
+                  <span>до</span>
+                </label>
+              </div>
+
+              <div class="range">
+                <div class="rage-scale">
+                  <div class="range-bar" style="left: 0; width: 226px">
+                    <button type="button" class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+
+                    <button type="button" class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
             </fieldset>
 
             <div class="catalog-filter-buttons">
@@ -132,14 +165,14 @@
           </form>
         </header>
 
-        <section class="catalog">
+        <section class="catalog" data-test="catalog">
           <h2 class="visually-hidden">Каталог гостиниц</h2>
 
           <div class="sorting">
             <p class="bold">Найдено гостиниц: <span class="hotel-number">38</span></p>
 
-            <div class="card-switch">
-              <select name="select" id="select-filter" aria-label="Сортировка">
+            <div class="card-switch"><span class="visually-hidden">Сортировка</span>
+              <select class="select-filter" name="select" id="select-filter" aria-label="Сортировка">
                 <option class="select-filter-option">Сначала дешевые</option>
                 <option class="select-filter-option">Сначала дорогие</option>
                 <option class="select-filter-option">Сначала популярные</option>
@@ -188,7 +221,7 @@
                   <button class="button blue card-buttton"><span>В избранное</span></button>
                   <button class="button active card-buttton hidden"><span>В избранном</span></button>
 
-                  <div class="stars">
+                  <div class="stars"><span class="visually-hidden">4 звезды</span>
                     <span class="star"></span>
                     <span class="star"></span>
                     <span class="star"></span>
@@ -213,7 +246,7 @@
                   <button class="button blue card-buttton hidden"><span>В избранное</span></button>
                   <button class="button active card-buttton active"><span>В избранном</span></button>
 
-                  <div class="stars">
+                  <div class="stars"><span class="visually-hidden">4 звезды</span>
                     <span class="star"></span>
                     <span class="star"></span>
                     <span class="star"></span>
@@ -238,7 +271,7 @@
                   <button class="button blue card-buttton"><span>В избранное</span></button>
                   <button class="button active card-buttton hidden"><span>В избранном</span></button>
 
-                  <div class="stars">
+                  <div class="stars"><span class="visually-hidden">3 звезды</span>
                     <span class="star"></span>
                     <span class="star"></span>
                     <span class="star"></span>
@@ -262,7 +295,7 @@
                   <button class="button blue card-buttton"><span>В избранное</span></button>
                   <button class="button active card-buttton hidden"><span>В избранном</span></button>
 
-                  <div class="stars">
+                  <div class="stars"><span class="visually-hidden">2 звезды</span>
                     <span class="star"></span>
                     <span class="star"></span>
                   </div>
@@ -274,7 +307,7 @@
 
           <!--Пагинация-->
 
-          <ul class="pagination">
+          <ul class="pagination"><span class="visually-hidden">Пагинация</span>
 
             <li class="pagination-item">
               <a class="pagination-link active">1</a>
@@ -304,10 +337,10 @@
 
         </section>
 
-        <section class="catalog-subscribe">
+        <section class="catalog-subscribe" data-test="subscribe">
           <h2 class="visually-hidden">Подписка</h2>
           <p class="bold">Подпишитесь на рассылку</p>
-          <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p>Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
 
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="catalog-email-input" type="email" name="email" placeholder="Ваш e-mail">
@@ -317,9 +350,9 @@
         </section>
       </main>
 
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
 
-        <ul class="socials-list">
+        <ul class="socials-list"><span class="visually-hidden">Социальные сети</span>
           <li class="socials-list-item">
             <a class="socials-list-link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Вконтакте</span>
