@@ -326,7 +326,7 @@ body {
   background-color: #82B3D3;
 }
 
-.advantages-list li:first-child .title, .advantages-list li:last-child .title {
+.big .title, .big .title {
   color: #FFFFFF;
 }
 
@@ -353,7 +353,7 @@ body {
   background-color: rgba(0, 0, 0, 0.30);
 }
 
-.advantages-list li:first-child .title::after, .advantages-list li:last-child .title::after {
+.big .title::after, .big .title::after {
   background-color: rgba(255, 255, 255, 0.30);
 }
 
@@ -886,15 +886,15 @@ a[href^="tel:"]:active {
   margin-right: 0;
 }
 
-.switch-button-list li:first-child button {
+.tiles {
   background: #FFFFFF url(../images/button-tiles.svg) center center no-repeat;
 }
 
-.switch-button-list li:nth-child(2) button {
+.table {
   background: #FFFFFF url(../images/button-table.svg) center center no-repeat;
 }
 
-.switch-button-list li:last-child button {
+.list {
   margin-right: 0;
   background: #FFFFFF url(../images/button-list.svg) center center no-repeat;
 }
