@@ -51,7 +51,7 @@
               </a>
             </li>
             <li class="navigation-user-item want-button">
-              <a class="button small" href="#"><span>Хочу сюда!</span></a>
+              <a class="button small" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -63,7 +63,7 @@
         <header class="catalog-header">
           <h1 class="catalog-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
-            <li class="breadcrumbs-item">
+            <li class="breadcrumbs-item"><span class="visually-hidden">Главная страница.</span>
               <a class="breadcrumbs-link home" href="index.html"></a>
             </li>
 
@@ -146,11 +146,11 @@
               <div class="range">
                 <div class="rage-scale">
                   <div class="range-bar" style="left: 0; width: 226px">
-                    <button type="button" class="range-toggle toggle-min">
+                    <button class="range-toggle toggle-min"type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
 
-                    <button type="button" class="range-toggle toggle-max">
+                    <button class="range-toggle toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену.</span>
                     </button>
                   </div>
@@ -161,7 +161,7 @@
 
             <div class="catalog-filter-buttons">
               <button class="button blue small" type="submit">Применить</button>
-              <button class="button reset"><span>Сбросить</span></button>
+              <button class="button reset" type="button">Сбросить</button>
             </div>
 
           </form>
@@ -182,19 +182,19 @@
 
               <ul class="switch-button-list">
                 <li class="switch-button-item">
-                  <button class="switch-button tiles active">
+                  <button class="switch-button tiles active" type="button">
                     <span class="visually-hidden">Отображение карточек плиткой</span>
                   </button>
                 </li>
 
                 <li class="switch-button-item">
-                  <button class="switch-button table">
+                  <button class="switch-button table" type="button">
                     <span class="visually-hidden">Отображение карточек таблицей"</span>
                   </button>
                 </li>
 
                 <li class="switch-button-item">
-                  <button class="switch-button list">
+                  <button class="switch-button list" type="button">
                     <span class="visually-hidden">Отображение карточек списком"</span>
                   </button>
                 </li>
@@ -220,8 +220,10 @@
                   <p class="card-price right">От 4000 ₽</p>
 
                   <a class="button card-buttton" href="#"><span>Подробнее</span></a>
-                  <button class="button blue card-buttton"><span>В избранное</span></button>
-                  <button class="button active card-buttton hidden"><span>В избранном</span></button>
+                  <button class="button blue card-buttton" type="button">
+                    <span>В избранное</span>
+                    <span class="hidden">В избранном</span>
+                  </button>
 
                   <div class="stars"><span class="visually-hidden">4 звезды</span>
                     <span class="star"></span>
@@ -245,8 +247,10 @@
                   <p class="card-price right">От 5000 ₽</p>
 
                   <a class="button card-buttton" href="#"><span>Подробнее</span></a>
-                  <button class="button blue card-buttton hidden"><span>В избранное</span></button>
-                  <button class="button active card-buttton active"><span>В избранном</span></button>
+                  <button class="button blue card-buttton active" type="button">
+                    <span class="hidden">В избранное</span>
+                    <span>В избранном</span>
+                  </button>
 
                   <div class="stars"><span class="visually-hidden">4 звезды</span>
                     <span class="star"></span>
@@ -270,8 +274,10 @@
                   <p class="card-price right">От 2500 ₽</p>
 
                   <a class="button card-buttton" href="#"><span>Подробнее</span></a>
-                  <button class="button blue card-buttton"><span>В избранное</span></button>
-                  <button class="button active card-buttton hidden"><span>В избранном</span></button>
+                  <button class="button blue card-buttton" type="button">
+                    <span>В избранное</span>
+                    <span class="hidden">В избранном</span>
+                  </button>
 
                   <div class="stars"><span class="visually-hidden">3 звезды</span>
                     <span class="star"></span>
@@ -294,8 +300,10 @@
                   <p class="card-price right">От 1500 ₽</p>
 
                   <a class="button card-buttton" href="#"><span>Подробнее</span></a>
-                  <button class="button blue card-buttton"><span>В избранное</span></button>
-                  <button class="button active card-buttton hidden"><span>В избранном</span></button>
+                  <button class="button blue card-buttton" type="button">
+                    <span>В избранное</span>
+                    <span class="hidden">В избранном</span>
+                  </button>
 
                   <div class="stars"><span class="visually-hidden">2 звезды</span>
                     <span class="star"></span>
@@ -345,7 +353,7 @@
           <p>Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
 
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="catalog-email-input" type="email" name="email" placeholder="Ваш e-mail">
+            <input class="catalog-email-input" type="email" name="email" placeholder="Ваш e-mail" required>
             <button class="button blue subscribe-button" type="submit">Подписаться</button>
           </form>
 
@@ -381,7 +389,7 @@
         </ul>
 
           <address>
-            <a href="tel:+78128121212">+7 (812) 812-12-12</a>
+            <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           </address>
 
           <a class="footer-logo" href="https://htmlacademy.ru"><span class="visually-hidden">Логотип html academy</span>
