@@ -1246,7 +1246,7 @@ span.star::before {
 
 .tooltip {
   position: absolute;
-  right: 46px;
+  left: 60px;
 }
 
 .tooltip-button {
