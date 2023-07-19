@@ -123,11 +123,11 @@ body {
   line-height: 20px;
 }
 
-.button["disabled"] {
+.button[disabled] {
   background-color: #e5e5e5;
 }
 
-.button.reset["disabled"] {
+.button.reset[disabled] {
   background-color: transparent;
   opacity: 0.1;
 }
@@ -661,7 +661,11 @@ body {
   display: block;
 }
 
-.filter:hover,
+.filter:hover {
+  opacity: 0.6;
+}
+
+
 .filter:active {
   opacity: 0.3;
 }
@@ -866,7 +870,7 @@ body {
   border: 2px solid #68a2ca;
 }
 
-.select-filter["disabled"] {
+.select-filter[disabled] {
   opacity: 0.3;
 }
 
