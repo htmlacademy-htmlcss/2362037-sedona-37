@@ -1177,6 +1177,7 @@ span.star::before {
 }
 
 .modal-counter-container {
+  position: relative;
   margin-bottom: 48px;
   display: flex;
 }
@@ -1246,7 +1247,8 @@ span.star::before {
 
 .tooltip {
   position: absolute;
-  left: 60px;
+  right: 157px;
+  top: 10px;
 }
 
 .tooltip-button {
